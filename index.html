@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.4s ease;
+  }
+  body{
+    padding: 20px;
+  }
+  
+  /* ===== Colours ===== */
+  :root {
+    --body-color: #white;
+    --nav-color: #0f0f29;
+    --side-nav: #010718;
+    --text-color: #fff;
+    --search-bar: #f2f2f2;
+    --search-text: #010718;
+  }
+  .shop-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+   .shop-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.shop-card {
+    flex: 0 0 auto;
+  width: 220px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.cover-photo img, .profile-photo img {
+  width: 100%;
+  display: block;
+}
+
+.profile-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 60%;
+  left:37%;
+  border: 3px solid #fff;
+}
+
+.shop-info {
+    padding: 40px 10px 10px 10px;
+    
+  text-align: center;
+}
+
+.follow-btn {
+    background-color: var(--nav-color);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 8px; /* Spacing between the price and the button */
+}
+
+
+.follow-btn:hover {
+  background-color: #fff;
+  border:1px solid var(--nav-color);
+  color:var(--nav-color);
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px;
+
+    font-weight: 600;
+    margin-top: 8px; /* Spacing between the price and the button */
+}
+
+.shop-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* This will hide the scrollbar for IE, Edge, and Firefox */
+.shop-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.btn-nav {
+    background: var(--nav-color);
+    color: #fff;
+    border-radius: 50px;
+    width: 50px;
+    border: solid white 1px;
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure the buttons are above the card elements */
+  }
+  
+  .btn-nav:first-child {
+    left: 10px;
+  }
+  
+  .btn-nav:last-child {
+    right: 10px;
+  }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="shop-container">
+        <button class="btn-nav" onclick="scrollL()">&lt;</button>
+        <div class="shop-scroll">
+            
+            <div class="shop-card"> 
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="cover-photo">
+                    <img src="imgs/cover.png" alt="Cover Photo 1">
+                </div>
+                <div class="profile-photo">
+                    <img src="imgs/profile.png" alt="Profile Photo 1">
+                </div>
+                <div class="shop-info">
+                    <h3>Gammal Tech </h3>
+                    <button class="follow-btn">View Shop</button>
+                </div>
+            </div>
+
+            
+            <!-- Duplicate the above artist-card div block for more artists -->
+        </div>
+        <button class="btn-nav" onclick="scrollRight()">&gt;</button>
+        </div>
+        
+        
+    </body>
+<script>
+function scrollL() {
+    document.querySelector('.shop-scroll').scrollBy({ left: -200, behavior: 'smooth' });
+}
+
+
+function scrollRight() {
+  document.querySelector('.shop-scroll').scrollBy({ left: 200, behavior: 'smooth' });
+}
+
+
+</script>
+</html>
